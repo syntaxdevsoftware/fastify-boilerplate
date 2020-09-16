@@ -1,0 +1,46 @@
+{
+  "name": "template",
+  "private": true,
+  "description": "template for node apps using fastify",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "watch": "tsc --watch --pretty",
+    "start": "cross-env NODE_ENV=development yarn build && concurrently \"yarn watch\" \"nodemon dist/index.js\" -c \"green,yellow\" -k"
+  },
+  "dependencies": {
+    "@types/mongodb": "^3.5.27",
+    "copy-webpack-plugin": "^6.1.0",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "fastify": "^3.4.1",
+    "fastify-cors": "^4.1.0",
+    "fastify-helmet": "^5.0.3",
+    "fastify-static": "^3.2.0",
+    "mongodb": "^3.6.2",
+    "webpack": "^4.44.1"
+  },
+  "devDependencies": {
+    "@types/module-alias": "^2.0.0",
+    "@types/node": "^14.10.1",
+    "concurrently": "^5.3.0",
+    "eslint": "^7.9.0",
+    "fastify-cli": "^2.2.0",
+    "module-alias": "^2.2.2",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.1.1",
+    "typescript": "^4.0.2"
+  },
+  "author": {
+    "email": "tiagoribeiro.1803@gmail.com",
+    "name": "Tiago Ribeiro"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@routes": "dist/routes",
+    "@controllers*": "dist/controllers",
+    "@utils*": "dist/utils",
+    "@errors*": "dist/errors",
+    "@types*": "dist/types"
+  }
+}

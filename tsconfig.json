@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "CommonJS",
+    "target": "es2019",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "removeComments": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "paths": {
+      "@routes*": ["src/routes"],
+      "@controllers*": ["src/controllers"],
+      "@utils*": ["src/utils"],
+      "@errors*": ["src/errors"],
+      "@types*": ["src/types"]
+    },
+    "declaration": true
+  },
+  "include": ["src"],
+  "compileOnSave": true
+}
